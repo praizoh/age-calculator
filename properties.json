@@ -3,6 +3,6 @@
     "track": "backend",
     "email": "oremei.akande@gmail.com",
     "githubUsername": "praizoh",
-    "deployedAppURL": "",
+    "deployedAppURL": "https://pipeline-age-calculator.herokuapp.com/api/v1",
     "explainer": ""
 }
