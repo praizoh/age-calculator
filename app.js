@@ -18,7 +18,7 @@ app.use(helmet());
 
 
 //Routes
-app.use("/api/v1", routes);
+app.use("/", routes);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
