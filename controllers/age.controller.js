@@ -17,7 +17,7 @@ exports.getAge = async ( req, res ) => {
 
         const { dob } = req.query;
         const age = await AgeService.ageCalulator(dob);
-        res.status(200).send({ status:200, message:"Age gotten successfully", data:age })
+        res.status(200).send({ status:200, message:"Age gotten successfully", age })
     }catch(error){
         res.status(500).send({error});
     }

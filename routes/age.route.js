@@ -10,18 +10,11 @@ const limiter = rateLimit({
     windowMs: 1000, // 1 sec window
     max: 3, // start blocking after 3 requests
     message: "Too many requests created from this IP, please try again after 30 secs",
-    standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
-	legacyHeaders: false, // Disable the `X-RateLimit-*` headers
-    statusCode: 429,
-    keyGenerator: function (req) {
-        return req.headers["x-forwarded-for"] || req.connection.remoteAddress; 
-    }
+    
 });
-
-router.use(limiter)
 
 const { getAge } = ageController;
 
-router.get("/", getAge)
+router.get("/", limiter, getAge)
 
 module.exports = router;
