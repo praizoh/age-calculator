@@ -1,4 +1,4 @@
-const middleware = (schema, property) => {
+const joiMiddleware = (schema, property) => {
   return (req, res, next) => {
     const { error } = schema.validate(req.body);
     const valid = error == null;
@@ -13,4 +13,4 @@ const middleware = (schema, property) => {
     }
   };
 };
-module.exports = middleware;
+module.exports = joiMiddleware;
