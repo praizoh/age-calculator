@@ -23,13 +23,9 @@ ___
 ## API Information
 The API endpoints are hosted on Heroku - [Age Calculator](https://pipeline-age-calculator.herokuapp.com)
 
-|METHOD  |DESCRIPTION                        |ENDPOINT                                  |
-|------- |-----------------------------------|------------------------------------------|
-|GET    |Calculate age                       |/howold                     |
-
-|DESCRIPTION         |REQUIRED FIELDS                                                    |                 
-|--------------------|-------------------------------------------------------------------|
-|How Old             |dob                               |
+|METHOD  |DESCRIPTION                        |ENDPOINT                    |Required Field   |
+|------- |-----------------------------------|----------------------------|-----------------|
+|GET    |Calculate age                       |/howold                     | dob             |
 
 ___
 ## The Endpoints can be accessed remotely or locally.
